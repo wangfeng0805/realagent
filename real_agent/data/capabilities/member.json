@@ -1,0 +1,93 @@
+[
+  {
+    "intent": "member.info",
+    "ability": "member",
+    "source": "function",
+    "function": "fetch_current_member",
+    "required_context": ["mpsessid"],
+    "direct_response": true,
+    "renderer": "member.info",
+    "examples": ["我是什么会员等级", "我的会员信息", "我的等级", "会员等级"]
+  },
+  {
+    "intent": "member.points",
+    "ability": "member",
+    "source": "function",
+    "function": "fetch_current_member",
+    "required_context": ["mpsessid"],
+    "direct_response": true,
+    "renderer": "member.points",
+    "examples": ["我现在多少积分", "我的积分有多少", "积分余额", "查积分"]
+  },
+  {
+    "intent": "member.point_detail",
+    "ability": "member",
+    "source": "function",
+    "function": "fetch_point_records",
+    "required_context": ["mpsessid"],
+    "default_params": {"direction": "decrease", "limit": 10},
+    "direct_response": true,
+    "renderer": "member.point_detail",
+    "examples": ["我的积分明细", "积分流水", "积分记录", "积分用在哪"]
+  },
+  {
+    "intent": "member.expiring_points",
+    "ability": "member",
+    "source": "function",
+    "function": "fetch_expiring_points",
+    "required_context": ["mpsessid"],
+    "direct_response": true,
+    "renderer": "member.expiring_points",
+    "examples": ["我有多少积分即将过期", "积分快过期", "本月到期积分"]
+  },
+  {
+    "intent": "member.year_end_expiring_points",
+    "ability": "member",
+    "source": "api",
+    "path": "/member/westbund/getMemberRemainPointBeforeTime.xhtml",
+    "required_context": ["mpsessid"],
+    "direct_response": true,
+    "renderer": "member.year_end_expiring_points",
+    "examples": ["我年底有多少积分会清零", "年底积分清零", "今年哪些积分会过期"]
+  },
+  {
+    "intent": "member.upgrade_progress",
+    "ability": "member",
+    "source": "function",
+    "function": "fetch_next_level_progress",
+    "required_context": ["mpsessid"],
+    "direct_response": true,
+    "renderer": "member.upgrade_progress",
+    "examples": ["我还差多少升级", "升级进度", "距离下一级还差多少"]
+  },
+  {
+    "intent": "member.growth_detail",
+    "ability": "member",
+    "source": "api",
+    "path": "/member/growth/listGrowthRecordByEveryDay.xhtml",
+    "required_context": ["mpsessid"],
+    "default_params": {"pageNo": 1, "pageSize": 10},
+    "direct_response": true,
+    "renderer": "member.growth_detail",
+    "examples": ["我的成长值是多少", "成长值明细", "有效成长值"]
+  },
+  {
+    "intent": "member.levels",
+    "ability": "member",
+    "source": "api",
+    "path": "/member/level/listMemberLevel.xhtml",
+    "direct_response": false,
+    "renderer": "member.levels",
+    "examples": ["会员等级列表", "会员等级怎么划分", "金卡是什么等级"]
+  },
+  {
+    "intent": "member.mzx_points",
+    "ability": "member",
+    "source": "api",
+    "path": "/member/westbund/mzx/point/query.xhtml",
+    "required_context": ["mpsessid"],
+    "direct_response": true,
+    "renderer": "member.mzx_points",
+    "examples": ["梦中心积分", "西岸梦中心积分", "我的梦中心积分"]
+  }
+]

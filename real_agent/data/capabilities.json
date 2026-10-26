@@ -1,0 +1,211 @@
+[
+  {
+    "id": "member_info",
+    "type": "tool",
+    "domain": "member",
+    "name": "查询当前会员信息",
+    "description": "查询当前登录用户的会员等级、积分、成长值、会员有效期、会员资料。",
+    "examples": [
+      "我的会员信息", "我是谁", "我的会员等级是什么", "我有多少积分", "当前积分",
+      "我的成长值是多少", "会员有效期到什么时候", "查一下我的会员资料", "我是什么会员",
+      "我的账号信息", "当前会员等级", "我的积分余额"
+    ],
+    "tool_name": "get_current_member_info",
+    "entities": {},
+    "search_strategy": "single_tool"
+  },
+  {
+    "id": "member_benefits",
+    "type": "knowledge",
+    "domain": "knowledge",
+    "name": "会员权益规则",
+    "description": "查询会员等级、停车权益、生日礼、积分和成长值规则。",
+    "examples": [
+      "会员有什么权益", "会员停车权益有哪些", "免费停车怎么兑换", "生日礼有哪些",
+      "会员怎么升级", "会员等级门槛", "成长值规则", "积分怎么获得", "积分什么时候清零",
+      "积分有效期", "积分怎么用", "积分补登规则"
+    ],
+    "knowledge_id": "member_rules",
+    "entities": {},
+    "search_strategy": "deterministic"
+  },
+  {
+    "id": "parking_status",
+    "type": "tool",
+    "domain": "parking",
+    "name": "查询实时停车状态",
+    "description": "查询停车场当前剩余车位、车位是否已满、充电桩等实时停车信息。",
+    "examples": [
+      "停车场还有车位吗", "现在能停车吗", "地下车库满了吗", "还有多少空车位",
+      "实时车位", "停车场余位", "停车场还有位置吗", "现在还有位置吗", "车库还有位置吗", "车库还有地方吗",
+      "有充电桩吗", "停车场当前情况"
+    ],
+    "tool_name": "get_miniprogram_parking_status",
+    "entities": {},
+    "search_strategy": "single_tool"
+  },
+  {
+    "id": "parking_policy",
+    "type": "knowledge",
+    "domain": "knowledge",
+    "name": "停车规则与停车地图",
+    "description": "查询停车收费、停车缴费、停车开票、停车分区、入口和停车地图。",
+    "examples": [
+      "停车怎么收费", "停车费多少钱", "停车收费标准", "停车分区图", "有几个停车场",
+      "停车场怎么分布", "停车缴费怎么弄", "停车开票", "停车发票", "南区停车场在哪",
+      "北区停车场入口", "停车地图"
+    ],
+    "knowledge_id": "parking_policy",
+    "entities": {},
+    "search_strategy": "deterministic"
+  },
+  {
+    "id": "current_activities",
+    "type": "tool",
+    "domain": "activity",
+    "name": "查询当前活动",
+    "description": "查询商场今天、周末、近期正在进行或即将开始的活动、演出、展览、快闪。",
+    "examples": [
+      "今天有什么活动", "最近有什么活动", "周末有什么活动", "现在有什么演出",
+      "有什么展览", "近期有什么快闪", "今天活动安排", "本周活动", "有什么好玩的活动",
+      "当前活动", "演出展览有哪些", "活动推荐"
+    ],
+    "tool_name": "get_current_activities",
+    "entities": {},
+    "search_strategy": "single_tool"
+  },
+  {
+    "id": "activity_detail",
+    "type": "tool",
+    "domain": "activity",
+    "name": "查询活动详情",
+    "description": "查询具体活动、演出、展览的详情、时间、地点、价格、购票或预约方式。",
+    "examples": [
+      "介绍一下这个活动", "活动详情", "这个展览怎么买票", "演出怎么购票",
+      "活动怎么参与", "门票多少钱", "开心麻花怎么购票", "展览详情",
+      "活动在哪里", "活动几点开始"
+    ],
+    "tool_name": "get_current_activities",
+    "entities": {},
+    "search_strategy": "single_tool"
+  },
+  {
+    "id": "merchant_search",
+    "type": "tool",
+    "domain": "merchant",
+    "name": "查询商户和店铺",
+    "description": "查询商户列表、餐饮咖啡店、店铺位置、营业时间和商户详情。",
+    "examples": [
+      "有哪些商户", "有什么餐厅", "推荐咖啡店", "蓝瓶咖啡在哪里", "商户营业时间",
+      "有什么美食", "哪里有奶茶", "找一家火锅店", "亲子店铺", "运动品牌有哪些",
+      "店铺列表", "商家在哪"
+    ],
+    "tool_name": "search_miniprogram_merchants",
+    "entities": {},
+    "search_strategy": "single_tool"
+  },
+  {
+    "id": "point_mall",
+    "type": "tool",
+    "domain": "point_mall",
+    "name": "查询积分商城商品",
+    "description": "查询积分商城可兑换商品、兑换条件、库存、积分和现金金额。",
+    "examples": [
+      "积分商城有什么", "积分能换什么", "积分可以兑换什么", "有什么可以兑换",
+      "积分商品有哪些", "兑换商品库存", "这个商品多少积分", "可以兑换吗",
+      "积分商城库存", "积分兑换商品"
+    ],
+    "tool_name": "get_point_mall_products",
+    "entities": {},
+    "search_strategy": "single_tool"
+  },
+  {
+    "id": "transport_shuttle",
+    "type": "tool",
+    "domain": "transport",
+    "name": "查询导览车和接驳车",
+    "description": "查询西岸导览车、接驳车、站点、路线、运营时间和车辆位置。",
+    "examples": [
+      "导览车路线是什么", "接驳车现在有吗", "西岸巴士站点", "导览车运营时间",
+      "导览车到哪了", "接驳车几点开", "导览车停靠站", "有接驳巴士吗",
+      "西岸导览车详情", "车辆实时位置"
+    ],
+    "tool_name": "get_westbund_shuttle_routes",
+    "entities": {},
+    "search_strategy": "single_tool"
+  },
+  {
+    "id": "venue_navigation",
+    "type": "knowledge",
+    "domain": "transport",
+    "name": "到访交通与导航",
+    "description": "查询西岸梦中心地址、怎么去、地铁公交、自驾打车、导航路线。",
+    "examples": [
+      "西岸梦中心怎么去", "梦中心地址", "gate m在哪", "怎么到西岸梦中心",
+      "地铁怎么去", "公交怎么去", "自驾怎么走", "打车到哪里", "导航去梦中心",
+      "具体地址", "交通攻略"
+    ],
+    "knowledge_id": "venue_navigation",
+    "entities": {},
+    "search_strategy": "deterministic"
+  },
+  {
+    "id": "facility_service",
+    "type": "knowledge",
+    "domain": "facility",
+    "name": "场内设施与便民服务",
+    "description": "查询卫生间、客服中心、母婴室、物品租赁、充电宝、免费服务等场内设施。",
+    "examples": [
+      "卫生间在哪", "厕所在哪里", "客服中心在哪", "可以租轮椅吗", "婴儿车怎么租",
+      "物品租赁押金", "有什么免费服务", "母婴室在哪里", "充电宝在哪", "客服中心提供什么",
+      "可以租雨伞吗", "便民服务有哪些"
+    ],
+    "knowledge_id": "facility_service",
+    "entities": {},
+    "search_strategy": "deterministic"
+  },
+  {
+    "id": "pet_policy",
+    "type": "knowledge",
+    "domain": "knowledge",
+    "name": "宠物进入政策",
+    "description": "查询宠物是否可以进入商场、宠物公约、大型犬、牵引和室内餐饮规则。",
+    "examples": [
+      "可以带狗进去吗", "能带宠物吗", "商场允许宠物进入吗", "能带猫吗",
+      "宠物友好吗", "宠物规则", "大型犬可以进吗", "宠物要牵绳吗",
+      "餐厅能带宠物吗", "宠物公约"
+    ],
+    "knowledge_id": "pet_policy",
+    "entities": {},
+    "search_strategy": "deterministic"
+  },
+  {
+    "id": "sport_policy",
+    "type": "knowledge",
+    "domain": "knowledge",
+    "name": "运动友好规则",
+    "description": "查询自行车、滑板、跑步、非机动车、运动公约和运动注意事项。",
+    "examples": [
+      "可以骑自行车吗", "能滑板吗", "运动规则", "运动友好公约", "可以跑步吗",
+      "非机动车能进吗", "自行车能推进去吗", "运动注意事项", "场内能运动吗",
+      "电瓶车可以进吗"
+    ],
+    "knowledge_id": "sport_policy",
+    "entities": {},
+    "search_strategy": "deterministic"
+  },
+  {
+    "id": "recommendation",
+    "type": "mixed",
+    "domain": "recommendation",
+    "name": "综合推荐",
+    "description": "处理开放式推荐、亲子、约会、送礼、好玩、划算等跨域问题。",
+    "examples": [
+      "有什么好玩的", "适合孩子玩吗", "帮朋友挑生日礼物", "推荐一家餐厅",
+      "约会适合去哪", "有什么划算的", "带小朋友怎么玩", "亲子推荐",
+      "预算300买什么", "附近有什么值得逛"
+    ],
+    "entities": {},
+    "search_strategy": "cross_domain"
+  }
+]

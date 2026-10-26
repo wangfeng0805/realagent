@@ -1,0 +1,33 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "调试：debug_driver（逐层）",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/debug_driver.py",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "env": { "PYTHONPATH": "${workspaceFolder}" }
+    },
+    {
+      "name": "调试：当前文件",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "env": { "PYTHONPATH": "${workspaceFolder}" }
+    },
+    {
+      "name": "调试：uvicorn 服务",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": ["real_agent.app.main:app", "--port", "8000"],
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "env": { "PYTHONPATH": "${workspaceFolder}" }
+    }
+  ]
+}

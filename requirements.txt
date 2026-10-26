@@ -1,0 +1,21 @@
+# ── real_agent（小梦）运行依赖 ──
+# Python 3.12（与编译产物一致）。装完即可 import real_agent.app.main。
+
+# Web 服务
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+pydantic==2.10.4
+python-dotenv==1.0.1
+
+# HTTP 客户端（小程序只读接口 / 活动 / 积分商城）
+httpx==0.28.1
+
+# 大模型 / ReAct Agent（走大模型那一跳必需）
+langchain-core==0.3.28
+langchain-openai==0.2.14
+langgraph==0.2.60
+
+# RAG 知识库（可选：不装则 rag.retriever 回退空召回，不影响主链路）
+# sentence-transformers==3.3.1
+# pymilvus==2.5.0
+# numpy==2.2.1

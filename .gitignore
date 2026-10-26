@@ -1,0 +1,31 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.so
+.venv/
+venv/
+env/
+.pytest_cache/
+*.egg-info/
+.mypy_cache/
+.ruff_cache/
+
+# ---- 环境变量 / 密钥（切勿提交）----
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+
+# ---- 运行期数据（DB / 索引 / 会话；知识 md、能力 json、接口目录 json 仍会提交）----
+real_agent/data/*.db
+real_agent/data/*.sqlite
+real_agent/data/milvus.db
+real_agent/data/.milvus_fp
+real_agent/data/session/
+real_agent/data/legacy_mock/
+
+# ---- OS / 编辑器 ----
+.DS_Store
+Thumbs.db
+*.log

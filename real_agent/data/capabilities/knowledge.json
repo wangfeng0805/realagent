@@ -1,0 +1,20 @@
+[
+  {
+    "intent": "knowledge.member_rules",
+    "ability": "knowledge",
+    "source": "rag",
+    "filters": {"domain": "member"},
+    "direct_response": false,
+    "renderer": "knowledge.member_rules",
+    "examples": ["会员规则", "积分规则", "会员权益规则"]
+  },
+  {
+    "intent": "knowledge.search",
+    "ability": "knowledge",
+    "source": "rag",
+    "filters": {},
+    "direct_response": false,
+    "renderer": "knowledge.search",
+    "examples": ["帮我查一下规则", "知识查询", "官方说明"]
+  }
+]

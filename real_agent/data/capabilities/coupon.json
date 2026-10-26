@@ -1,0 +1,42 @@
+[
+  {
+    "intent": "coupon.count",
+    "ability": "coupon",
+    "source": "function",
+    "function": "fetch_coupon_count",
+    "required_context": ["mpsessid"],
+    "direct_response": true,
+    "renderer": "coupon.count",
+    "examples": ["我有几张优惠券", "优惠券数量", "我的券有多少"]
+  },
+  {
+    "intent": "coupon.owned",
+    "ability": "coupon",
+    "source": "api",
+    "path": "/member/couponpromotion/getMemberReceivedCouponPromotions.xhtml",
+    "required_context": ["mpsessid"],
+    "direct_response": true,
+    "renderer": "coupon.owned",
+    "examples": ["我有什么优惠券", "我的优惠券", "已领取优惠券"]
+  },
+  {
+    "intent": "coupon.receivable",
+    "ability": "coupon",
+    "source": "api",
+    "path": "/member/couponpromotion/getMemberReceivableCouponPromotions.xhtml",
+    "required_context": ["mpsessid"],
+    "direct_response": true,
+    "renderer": "coupon.receivable",
+    "examples": ["有什么优惠券可以领", "可领取优惠券", "有什么券可以领"]
+  },
+  {
+    "intent": "coupon.detail",
+    "ability": "coupon",
+    "source": "api",
+    "path": "/member/couponpromotion/getMemberCouponPromotion.xhtml",
+    "required_context": ["mpsessid"],
+    "direct_response": false,
+    "renderer": "coupon.detail",
+    "examples": ["优惠券详情", "这张券怎么用", "券适用范围"]
+  }
+]

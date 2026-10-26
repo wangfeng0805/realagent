@@ -1,0 +1,39 @@
+{
+  "updated_at": null,
+  "lots": [],
+  "free_hours_by_level": {
+    "wem1": {
+      "hours": 1,
+      "redemption": "20积分兑换",
+      "daily_limit": 1
+    },
+    "wem2": {
+      "hours": 1,
+      "redemption": "任意积分兑换"
+    },
+    "wem3": {
+      "hours": 2,
+      "redemption": "任意积分兑换"
+    },
+    "wem4": {
+      "hours": 3,
+      "redemption": "任意积分兑换"
+    }
+  },
+  "fee_rules": {
+    "first_hour_yuan": 10,
+    "subsequent_half_hour_yuan": 5,
+    "daily_cap_yuan": 80,
+    "daily_cap_hours": 8,
+    "free_grace_minutes": 15,
+    "exit_after_payment_minutes": 15,
+    "customer_service_phone": "021-60707667",
+    "note": "超过15分钟从入场时间起全额计费；超过24小时的部分重新按标准计费。"
+  },
+  "coupons": {},
+  "map": {
+    "image": "/knowledge-images/0c0a9ebacfcf89241129adb1c7636589.jpeg",
+    "caption": "GATE M 西岸梦中心停车指引图",
+    "note": "官方图中标注 A区、B区、C区、D区四个停车分区；出行攻略另标注北区、南区地下停车场入口。A-D 是分区，不应直接表述为四座独立停车场。图片未提供车位容量、收费或实时余位。"
+  }
+}

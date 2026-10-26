@@ -1,0 +1,93 @@
+[
+  {
+    "intent": "parking.availability",
+    "ability": "parking",
+    "source": "function",
+    "function": "fetch_parking_status",
+    "default_params": {"area_type": "westbund"},
+    "direct_response": true,
+    "renderer": "parking.availability",
+    "examples": ["现在还有多少停车位", "还有多少车位", "实时车位", "停车场还有空位吗"]
+  },
+  {
+    "intent": "parking.info",
+    "ability": "parking",
+    "source": "function",
+    "function": "fetch_parking_status",
+    "default_params": {"area_type": "westbund"},
+    "direct_response": true,
+    "renderer": "parking.info",
+    "examples": ["停车场在哪里", "附近哪里可以停车", "停车场位置", "停车场入口"]
+  },
+  {
+    "intent": "parking.fee",
+    "ability": "parking",
+    "source": "api",
+    "path": "/member/parking/queryFee.xhtml",
+    "required_context": ["mpsessid", "plateNo", "parkId", "apiType"],
+    "direct_response": true,
+    "renderer": "parking.fee",
+    "fallback": ["react"],
+    "examples": ["我现在停车费多少", "停车费用查询", "当前停车费", "停车账单"]
+  },
+  {
+    "intent": "parking.plates",
+    "ability": "parking",
+    "source": "function",
+    "function": "fetch_member_plates",
+    "required_context": ["mpsessid"],
+    "direct_response": true,
+    "renderer": "parking.plates",
+    "examples": ["我绑定了什么车牌", "我的车牌", "车牌列表", "绑定车牌"]
+  },
+  {
+    "intent": "parking.coupons",
+    "ability": "parking",
+    "source": "api",
+    "path": "/member/parking/coupon/getMemberCoupons.xhtml",
+    "required_context": ["mpsessid"],
+    "direct_response": true,
+    "renderer": "parking.coupons",
+    "examples": ["我有什么停车券", "我的停车券", "停车优惠券", "停车券卡包"]
+  },
+  {
+    "intent": "parking.available_coupons",
+    "ability": "parking",
+    "source": "api",
+    "path": "/member/parking/coupon/getAvaiableCoupons.xhtml",
+    "required_context": ["mpsessid"],
+    "direct_response": true,
+    "renderer": "parking.coupons",
+    "examples": ["可用停车券", "这笔停车能用什么券", "停车缴费可用券"]
+  },
+  {
+    "intent": "parking.coupon_promotions",
+    "ability": "parking",
+    "source": "api",
+    "path": "/member/parking/couponpromotion/getMemberCouponPromotions.xhtml",
+    "required_context": ["mpsessid"],
+    "direct_response": true,
+    "renderer": "parking.coupon_promotions",
+    "examples": ["停车券活动", "怎么领取停车券", "停车券怎么获得"]
+  },
+  {
+    "intent": "parking.discounts",
+    "ability": "parking",
+    "source": "api",
+    "path": "/member/parking/discount/getDiscountRepo.xhtml",
+    "required_context": ["mpsessid"],
+    "default_params": {"refresh": "Y"},
+    "direct_response": true,
+    "renderer": "parking.discounts",
+    "examples": ["我现在停车有什么优惠", "停车优惠", "停车有什么折扣", "金卡停车有什么优惠"]
+  },
+  {
+    "intent": "knowledge.parking_rules",
+    "ability": "knowledge",
+    "source": "rag",
+    "filters": {"domain": "parking"},
+    "direct_response": false,
+    "renderer": "knowledge.parking_rules",
+    "examples": ["停车怎么收费", "停车收费规则", "免费停车规则", "停车权益规则"]
+  }
+]
